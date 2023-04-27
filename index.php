@@ -1,3 +1,9 @@
+<?php
+    $url = "https://api.openweathermap.org/data/2.5/forecast?lat=23.710&lon=90.407&appid=c908b1113a2c788367ba7b7e051be74e";
+    $content = file_get_contents($url);
+    $clima = json_decode($content);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +15,7 @@
 </head>
 <body>
     <div class="container my-5">
-        <h1>Size</h1>
+        <h1>App</h1>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>
