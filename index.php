@@ -64,74 +64,72 @@
     <link rel="stylesheet" href="styles.css">
     <title>Weather App</title>
 </head>
-<body>
-    <div class="background-dark">
-        <div class="row container-fluid p-0 m-0 min-vh-100">
-        <div class="col-12 col-md-4 background-light d-flex flex-column justify-content-center align-items-center">
-            <div class="img">
-                <img src="<?=$today->icon?>" alt="">
-            </div>
-            <div class="py-5 text-white">
-                <span class="temp-text"><?=$today->temp?></span>
-                <span class="h1">&#8451;</span>
-            </div>
-            <div class="pb-5 text-white-50 h1">
-                <?=$today->name?>
-            </div>
-            <div class="pb-5 text-white-50 h6 fw-normal">
-                <span class="pe-3">Today</span> <?=$today->date?>
-            </div>
+<body class="background-dark">
+    <div class="row container-fluid p-0 m-0 min-vh-100">
+    <div class="col-12 col-md-4 background-light d-flex flex-column justify-content-center align-items-center min-vh-100">
+        <div class="img">
+            <img src="<?=$today->icon?>" alt="">
         </div>
-            <div class="col-12 col-md-8 container row p-md-5 text-white pe-0 d-flex justify-content-center">
-                <div class="row">
-                    <div class="col-12 col-sm-4 my-3">
-                        <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
-                            <div><?=$forecast[0]->date?></div>
-                            <div>
-                                <img src="<?=$forecast[0]->icon?>" alt="">
-                            </div>
-                            <div class="h4"><?=$forecast[0]->temp?> &#8451;</div>
+        <div class="py-5 text-white">
+            <span class="temp-text"><?=$today->temp?></span>
+            <span class="h1">&#8451;</span>
+        </div>
+        <div class="pb-5 text-white-50 h1">
+            <?=$today->name?>
+        </div>
+        <div class="pb-5 text-white-50 h6 fw-normal">
+            <span class="pe-3">Today</span> <?=$today->date?>
+        </div>
+    </div>
+        <div class="mx-auto col-12 col-md-8 container row p-md-5 text-white pe-0">
+            <div class="row">
+                <div class="col-12 col-sm-4 my-3">
+                    <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
+                        <div><?=$forecast[0]->date?></div>
+                        <div>
+                            <img src="<?=$forecast[0]->icon?>" alt="">
                         </div>
-                    </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
-                            <div><?=$forecast[1]->date?></div>
-                            <div>
-                                <img src="<?=$forecast[1]->icon?>" alt="">
-                            </div>
-                            <div class="h4"><?=$forecast[1]->temp?> &#8451;</div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
-                            <div><?=$forecast[2]->date?></div>
-                            <div>
-                                <img src="<?=$forecast[2]->icon?>" alt="">
-                            </div>
-                            <div class="h4"><?=$forecast[2]->temp?> &#8451;</div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
-                            <div><?=$forecast[3]->date?></div>
-                            <div>
-                                <img src="<?=$forecast[3]->icon?>" alt="">
-                            </div>
-                            <div class="h4"><?=$forecast[3]->temp?> &#8451;</div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
-                            <div><?=$forecast[4]->date?></div>
-                            <div>
-                                <img src="<?=$forecast[4]->icon?>" alt="">
-                            </div>
-                            <div class="h4"><?=$forecast[4]->temp?> &#8451;</div>
-                        </div>
+                        <div class="h4"><?=$forecast[0]->temp?> &#8451;</div>
                     </div>
                 </div>
-                
+                <div class="col-12 col-sm-4 my-3">
+                    <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
+                        <div><?=$forecast[1]->date?></div>
+                        <div>
+                            <img src="<?=$forecast[1]->icon?>" alt="">
+                        </div>
+                        <div class="h4"><?=$forecast[1]->temp?> &#8451;</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 my-3">
+                    <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
+                        <div><?=$forecast[2]->date?></div>
+                        <div>
+                            <img src="<?=$forecast[2]->icon?>" alt="">
+                        </div>
+                        <div class="h4"><?=$forecast[2]->temp?> &#8451;</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 my-3">
+                    <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
+                        <div><?=$forecast[3]->date?></div>
+                        <div>
+                            <img src="<?=$forecast[3]->icon?>" alt="">
+                        </div>
+                        <div class="h4"><?=$forecast[3]->temp?> &#8451;</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-4 my-3">
+                    <div class="p-4 background-light h-100 d-flex justify-content-center align-items-center flex-column">
+                        <div><?=$forecast[4]->date?></div>
+                        <div>
+                            <img src="<?=$forecast[4]->icon?>" alt="">
+                        </div>
+                        <div class="h4"><?=$forecast[4]->temp?> &#8451;</div>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </div>
 </body>
