@@ -19,7 +19,7 @@
             $this->description = $description;
         }
         function set_icon($icon) {
-            $this->icon = "https://openweathermap.org/img/wn/$icon@2x.png";
+            $this->icon = "https://openweathermap.org/img/wn/$icon@4x.png";
         }
     }
 
@@ -50,6 +50,8 @@
             $dateTest = $dateTemp;
         }
     }
+
+    $today = array_shift($forecast);
 ?>
 
 <!DOCTYPE html>
@@ -59,11 +61,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>Weather App</title>
 </head>
 <body>
-    <div class="container my-5">
-        <h1>App</h1>
+    <div class="background-dark">
+        <div class="row container-fluid p-0 min-vh-100">
+        <div class="col-12 col-md-4 background-light d-flex flex-column justify-content-center align-items-center">
+            <div class="img">
+                <img src="<?=$today->icon?>" alt="">
+            </div>
+            <div class="py-5 text-white">
+                <span class="temp-text"><?=$today->temp?></span>
+                <span class="h1">&#8451;</span>
+            </div>
+            <div class="pb-5 text-white-50 h1">
+                <?=$today->name?>
+            </div>
+            <div class="pb-5 text-white-50 h6 fw-normal">
+                <span class="pe-3">Today</span> <?=$today->date?>
+            </div>
+        </div>
+            <div class="col-12 col-md-8"></div>
+        </div>
     </div>
 </body>
 </html>
